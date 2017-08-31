@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <svg-circle-sector class="countdown-timer col-sm-12 col-md-10 col-lg-6" :angle="angle" :text="text"></svg-circle-sector>
+    <svg-circle-sector class="countdown-timer" :angle="angle" :text="text"></svg-circle-sector>
     <div class="controls-timer">
       <div class="btn-group" role="group">
         <button @click="start" type="button" :class="{disabled: state === 0}" class="btn btn-link"><img :src="playIcon" /></button>

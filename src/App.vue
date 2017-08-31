@@ -3,6 +3,7 @@
     <div class="timer">
       <pomodoro></pomodoro>
     </div>
+    <workout-component></workout-component>
     <div class="slides">
       <section>
         <h1>Hi, my name is Olga</h1>
@@ -45,6 +46,7 @@
   import Clock from './components/Clock.vue'
   import Tomato from './components/Tomato.vue'
   import Pomodoro from './components/timer/Pomodoro.vue'
+  import WorkoutComponent from './components/WorkoutComponent.vue'
   export default {
     name: 'app',
     data () {
@@ -53,7 +55,7 @@
       }
     },
     components: {
-      Pomodoro
+      Pomodoro, Tomato, WorkoutComponent
     },
     mounted () {
       Reveal.initialize({
@@ -69,6 +71,11 @@
 </script>
 
 <style scoped lang="scss">
+  .timer {
+    padding-top: 15px;
+    padding-left: 15px;
+    width: 10%;
+  }
   .logo {
     display: inline;
     max-width: 30%;

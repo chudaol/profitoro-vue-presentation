@@ -62,7 +62,6 @@
   @import "../../assets/styles/main";
 
   .timer-holder {
-    margin: 30px auto;
     display: table;
 
     @include media-breakpoint-down(md) {
@@ -88,8 +87,8 @@
     text-anchor: middle;
   }
   .timer {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     display: flex;
 
     @include media-breakpoint-down(md) {

@@ -1,28 +1,14 @@
 <template>
   <div>
-    <div class="container min-full-height">
-      <div class="main-content row">
-        <div v-show="state !== 0" class="col-sm-12 col-md-6 col-lg-5">
-          <div v-if="!showKittens">
-            <img class="img-fluid rounded" :src="chosenWorkout.picture" :alt="chosenWorkout.name">
+    <div class="container">
+      <div class="main-content">
+        <div v-show="state !== 0">
+          <div class="text-center" v-if="!showKittens">
+            <img data-toggle="modal" data-target="#workoutModal" class="img-fluid rounded" :src="chosenWorkout.picture" :alt="chosenWorkout.name">
             <h2 class="title">{{ chosenWorkout.name }}</h2>
-            <p class="description">
-              {{ chosenWorkout.description }}
-            </p>
-          </div>
-          <div v-if="showKittens">
-            <kittens-component></kittens-component>
-          </div>
-          <div v-if="!showKittens">
-            <button type="button" class="button button-primary">Done!</button>
-            <button type="button" class="button button-primary">Next</button>
-          </div>
-          <div class="lazy-section">
-            <h4 class="title">Feeling <span class="bold">{{ showKittens ? 'energetic' : 'lazy' }}</span>?</h4>
-            <button type="button" class="button button-primary-faded" @click="toggleKittens">{{ showKittens ? showWorkoutsButtonText : showKittensButtonText }}</button>
           </div>
         </div>
-        <div class="countdown-holder col-sm-12" v-bind:class="[state !== 0 ? 'col-md-6 col-lg-7' : 'col-md-12']">
+        <div class="countdown-holder">
           <count-down-timer ref="countdowntimer" @finished="togglePomodoro" :time="time"></count-down-timer>
         </div>
       </div>
@@ -31,7 +17,6 @@
 </template>
 <script>
   import CountDownTimer from './CountDownTimer.vue'
-  import KittensComponent from './KittensComponent.vue'
 
   const STATE = {
     WORKING: 0,
@@ -77,8 +62,7 @@
       }
     },
     components: {
-      CountDownTimer,
-      KittensComponent
+      CountDownTimer
     },
     methods: {
       togglePomodoro () {
@@ -96,9 +80,6 @@
             break
         }
         this.$refs.countdowntimer.start()
-      },
-      toggleKittens () {
-        this.showKittens = !this.showKittens
       }
     }
   }
@@ -108,6 +89,7 @@
 
   .title {
     margin: 10px 0;
+    text-align: center;
   }
   .description {
     margin: 20px 0;

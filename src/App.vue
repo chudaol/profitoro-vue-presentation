@@ -8,13 +8,18 @@
       <section>
         <h1>Hi, my name is Olga</h1>
         <div>
-          <div class="logo">
-            <img src="./assets/optiopay-logo.svg" alt="">
-          </div>
-          <div class="logo">
-            <img src="./assets/edera_logo.png" alt="">
+          <div class="logos row align-items-center">
+            <div class="col-6">
+              <img src="./assets/optiopay-logo.svg" alt="">
+            </div>
+            <div class="col-6">
+              <img src="./assets/edera_logo.png" alt="">
+            </div>
           </div>
         </div>
+        <aside class="notes">
+          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+        </aside>
       </section>
       <section>
         <h1>How I manage time and stay fit with Vue.js</h1>
@@ -71,6 +76,12 @@
 </script>
 
 <style scoped lang="scss">
+  .logos img {
+    padding: 20px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
   .timer {
     padding-top: 15px;
     padding-left: 15px;

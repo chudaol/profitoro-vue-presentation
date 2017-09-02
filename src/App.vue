@@ -17,9 +17,6 @@
             </div>
           </div>
         </div>
-        <aside class="notes">
-          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-        </aside>
       </section>
       <section>
         <h2>How I manage time and stay fit with Vue.js</h2>
@@ -28,13 +25,20 @@
         </div>
       </section>
       <section>
+        <h2>ProFitOro - part of the book</h2>
+        <p><a href="https://goo.gl/bQbwpW">https://goo.gl/bQbwpW</a></p>
+        <img src="./assets/images/book_cover.png" alt="book cover">
+        <p>Not published yet</p>
+      </section>
+      <section>
         <h2>Outline</h2>
         <ul>
-          <li>How I wrote a book about Vue.js</li>
+          <li>How I wrote my first book about Vue.js</li>
           <li>What is ProFitOro</li>
           <li>Vue, Vuex, Nuxt</li>
           <li>Firebase - auth, datastorage, database, hosting</li>
           <li>Jest - snapshot testing</li>
+          <li>Trigonometry + SVG + Vue = &hearts;</li>
           <li>CircleCI</li>
         </ul>
       </section>
@@ -192,12 +196,192 @@ export default function ({ store, redirect }) {
       </section>
       <section>
         <h2>Firebase</h2>
+        <img src="./assets/images/firebase.png" alt="Firebase">
+      </section>
+      <section>
+        <h2>Firebase</h2>
+        <ul>
+          <li class="fragment">Authentication</li>
+          <li class="fragment">Datastorage</li>
+          <li class="fragment">Real-time database</li>
+          <li class="fragment">Hosting + SSL</li>
+        </ul>
+        <div class="fragment">&hearts;</div>
+      </section>
+      <section>
+        <h2>Firebase</h2>
+        <h3>Auth</h3>
+        <p>store/actions.js</p>
+        <pre>
+          <code>
+authenticate ({state, dispatch}, {email, password}) {
+  firebaseApp.auth().signInWithEmailAndPassword(email, password)
+}
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h2>Firebase</h2>
+        <h3>Auth</h3>
+        <p>components/Login.vue</p>
+        <pre>
+          <code>
+&lt;template&gt;
+  &lt;input v-model="email" type="email" placeholder="username or email address" /&gt;
+  &lt;input v-model="password" type="password" placeholder="password" /&gt;
+  &lt;button @click="onAuth">Login!&lt;/button>
+&lt;/template>
+
+&lt;script>
+  import { mapActions } from 'vuex'
+
+  export default {
+    methods: {
+      ...mapActions(['authenticate']),
+      onAuth () {
+        this.authenticate({email: this.email, password: this.password})
+      }
+    }
+  }
+&lt;/script&gt;
+          </code>
+        </pre>
       </section>
       <section>
         <h2>Jest</h2>
+        <h3>Snapshot testing FTW</h3>
+        <pre>
+          <code>
+test('login snapshot', () => {
+  let $mounted = new Vue({
+    template: '&lt;login-page&gt;&lt;/login-page&gt;',
+    store: store(),
+    components: {
+      'login-page': LoginPage
+    }
+  }).$mount()
+  let $html = $mounted.$el.outerHTML
+  expect($html).toMatchSnapshot()
+})
+          </code>
+        </pre>
       </section>
       <section>
         <h2>CircleCI</h2>
+        <img src="./assets/images/ci.png" alt="CI">
+      </section>
+      <section>
+        <h2>CircleCI</h2>
+        <h3>Simple configuration</h3>
+        <div class="left-column">
+          <img src="./assets/images/workflow.png" alt="">
+        </div>
+        <div class="right-column">
+          <pre>
+            <code>
+workflows:
+  version: 2
+  build-and-approval-deploy:
+    jobs:
+      - build
+      - hold:
+         type: approval
+         requires:
+           - build
+      - deploy:
+          requires:
+            - hold
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section>
+        <h2>Timer</h2>
+        <p>Just an SVG</p>
+        <pre>
+          <code>
+<div class="center-content">
+  &lt;svg class="timer" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
+    &lt;circle class="bigCircle" r="100" cx="100" cy="100">&lt;/circle>
+    &lt;circle class="smallCircle" r="90" cx="100" cy="100">&lt;/circle>
+    &lt;path class="segment" :d="M100,100 L100, 0 A100,100 0 0,0 X, Y z">&lt;/path>
+  &lt;/svg>
+</div>
+          </code>
+        </pre>
+        <ul>
+          <li>M - move to</li>
+          <li>L - line to</li>
+          <li>A - arc</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Timer</h2>
+        <h3>Find X and Y</h3>
+        <pre>
+          <code>
+&lt;template>
+  &lt;svg class="timer">
+    &lt;circle class="bigCircle" r="100" cx="100" cy="100">&lt;/circle>
+    &lt;circle class="smallCircle" r="90" cx="100" cy="100">&lt;/circle>
+    &lt;path class="segment" :d="path">&lt;/path>
+  &lt;/svg>
+&lt;/template>
+&lt;script>
+  function calcEndPoint (angle) {
+    let x, y
+
+    x = 100 - 100 * Math.sin(Math.PI * angle / 180)
+    y = 100 - 100 * Math.cos(Math.PI * angle / 180)
+
+    return {
+      x, y
+    }
+  }
+
+  function calcPath (angle) {
+    let d
+    let {x, y} = calcEndPoint(angle)
+    if (angle <= 180) {
+      d = `M100,100 L100, 0 A100,100 0 0,0 ${x}, ${y} z`
+    } else {
+      d = `M100,100  L100, 0 A100,100 0 0,0 100, 200 A100,100 0 0,0 ${x}, ${y} z`
+    }
+    return d
+  }
+  export default {
+    props: ['angle'],
+    computed: {
+      path () {
+        return calcPath(this.angle)
+      }
+    }
+  }
+&lt;/script>
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h2>Timer</h2>
+        <h3>Angle calculation</h3>
+        <p>Set timeout and recalculate time property</p>
+        <p><strong>angle</strong> is a computed property</p>
+        <pre>
+          <code>
+angle () {
+  return 360 - (360 / this.time * this.timestamp)
+},
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h2>Was it worth it?</h2>
+        <ul>
+          <li>I've learned a lot</li>
+          <li>I have my second book</li>
+          <li>I have my ProFitOro and I use it</li>
+          <li>Big win! <span class="pink">&hearts;</span></li>
+        </ul>
       </section>
       <section>
         <h2>Conclusion</h2>

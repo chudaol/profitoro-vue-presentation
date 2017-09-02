@@ -28,8 +28,8 @@
 </g>
 <g id="PLAYER">
 	<g>
-		<rect fill="#002b36" width="9.496" height="19.896"/>
-		<rect x="12.661" fill="#002b36" width="9.495" height="19.896"/>
+		<rect fill="#002b36" fill-opacity="0.0" width="9.496" height="19.896"/>
+		<rect x="12.661" fill="#002b36" fill-opacity="0.0" width="9.495" height="19.896"/>
 	</g>
 </g>
 <g id="LOGO_1_" display="none">

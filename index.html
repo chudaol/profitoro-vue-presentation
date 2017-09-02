@@ -2,16 +2,90 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>profitoro-presentation</title>
+    <title>ProFitOro</title>
     <link rel="stylesheet" href="css/bootstrap.css" >
     <link rel="stylesheet" href="src/assets/reveal/index.css">
-    <link rel="stylesheet" href="src/assets/reveal/theme/moon.css">
+    <link rel="stylesheet" href="src/assets/reveal/theme/blood.css">
+    <link rel="stylesheet" href="src/assets/highlight/styles/default.css">
+    <style>
+      img {
+        max-height: 90vh!important;
+      }
+      .orange-background {
+        background-color: rgba(246, 138, 0, 0.71);
+      }
+      .pink-background {
+        background-color: rgba(236, 19, 140, 0.71);
+      }
+      .purple-background {
+        background-color: rgba(146, 62, 189, 0.67);;
+      }
+      .green-background {
+        background-color: rgba(114, 255, 130, 0.71);
+        color: rgb(98, 54, 78);
+      }
+      .pink {
+        color: rgba(236, 19, 140, 0.71);
+      }
+      .nice-pink {
+        color: #D04C69;
+      }
+      .nice-pink-background {
+        background-color: #D04C69;
+      }
+      .reveal .slides section .fragment.highlight-nice-pink {
+        opacity: 1;
+        font-weight: 600;
+      }
+      .reveal .slides section .fragment.highlight-nice-pink.visible {
+        color: #D04C69;
+      }
+      .reveal .slides section .fragment.grow.fat-letters.visible {
+        font-weight: 600;
+      }
+      .fat-letters {
+        font-weight: 600;
+      }
+      .clear {
+        clear:both;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .big-text {
+        font-weight: bold;
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+      .rounded-span {
+        padding: 0 6px 0 6px!important;
+        border-radius: 5px;
+      }
+      .line-through {
+        text-decoration: line-through;
+      }
+      .left-column {
+        width: 49%;
+        float: left;
+      }
+      .right-column {
+        width: 49%;
+        float: right;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
     <script src="js/jquery.js"></script>
     <script src="js/tether.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="src/assets/highlight/highlight.pack.js"></script>
     <script src="dist/build.js"></script>
   </body>
 </html>

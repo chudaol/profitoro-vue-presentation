@@ -27,7 +27,7 @@
 <g id="_x32_5:00">
 </g>
 <g id="PLAYER">
-	<polygon fill="#F15D59" points="18.523,10.694 0,0 0,21.389 18.523,10.694 0,0 0,21.389 	"/>
+	<polygon fill="#002b36" points="18.523,10.694 0,0 0,21.389 18.523,10.694 0,0 0,21.389 	"/>
 </g>
 <g id="LOGO_1_" display="none">
 </g>
@@ -36,7 +36,7 @@
 <g id="GRID" display="none">
 	<g id="_x32_4_Grid_Col" display="inline">
 		<g>
-			<rect x="-42.848" y="-604.117" opacity="0.1" fill="#FFEC00" width="60" height="800"/>
+			<rect x="-42.848" y="-604.117" opacity="0.1" fill="#002b36" width="60" height="800"/>
 		</g>
 	</g>
 </g>

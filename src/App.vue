@@ -451,7 +451,11 @@ angle () {
       <section>
         <h2>Conclusion</h2>
         <p class="fragment">Do not hesitate</p>
-        <p class="fragment">Just do it <span class="big-text pink">&hearts;</span></p>
+        <p class="fragment">Just do it <span class="big-text pink">&#x2764;</span></p>
+      </section>
+      <section>
+        <h1>Thank you</h1>
+        <h2>&#x1F64C</h2>
       </section>
     </div>
   </div>

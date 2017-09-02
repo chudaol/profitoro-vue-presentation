@@ -19,7 +19,7 @@
         </div>
       </section>
       <section>
-        <h2>How I manage time and stay fit with Vue.js</h2>
+        <h2>How I manage time and try to stay fit with Vue.js</h2>
         <div>
           <tomato></tomato>
         </div>
@@ -452,6 +452,12 @@ angle () {
         <h2>Conclusion</h2>
         <p class="fragment">Do not hesitate</p>
         <p class="fragment">Just do it <span class="big-text pink">&#x2764;</span></p>
+        <div class="fragment">
+          <p>we can help you</p>
+          <div class="logos">
+            <img src="./assets/edera_logo.png" alt="">
+          </div>
+        </div>
       </section>
       <section>
         <h1>Thank you</h1>

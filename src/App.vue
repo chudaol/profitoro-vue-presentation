@@ -25,84 +25,22 @@
         </div>
       </section>
       <section>
-        <h2>ProFitOro - part of the book</h2>
+        <h2>Outline</h2>
+        <ul>
+          <li>What is ProFitOro</li>
+          <li>Vue and Nuxt - components, data binding and routing</li>
+          <li>Firebase - auth, datastorage, database, hosting</li>
+          <li>Jest - snapshot testing</li>
+          <li>Kittens</li>
+          <li>Why I wrote a book about Vue.js?</li>
+          <li>Knowledge Sharing</li>
+        </ul>
+      </section>
+      <section>
+        <h2>What is ProFitOro</h2>
         <p><a href="https://goo.gl/bQbwpW">https://goo.gl/bQbwpW</a></p>
         <img src="./assets/images/book_cover.png" alt="book cover">
         <p>Not published yet</p>
-      </section>
-      <section>
-        <h2>Outline</h2>
-        <ul>
-          <li>How I wrote my first book about Vue.js</li>
-          <li>What is ProFitOro</li>
-          <li>Vue, Vuex, Nuxt</li>
-          <li>Firebase - auth, datastorage, database, hosting</li>
-          <li>Jest - snapshot testing</li>
-          <li>Trigonometry + SVG + Vue = &hearts;</li>
-          <li>CircleCI</li>
-        </ul>
-      </section>
-      <section>
-        <h2>How I wrote a book about Vue.js</h2>
-      </section>
-      <section>
-        <h2>Learning Vue.js 2</h2>
-        <a href="https://goo.gl/1ayuof">https://goo.gl/1ayuof</a>
-      </section>
-      <section>
-        <h2>I am not any Vue.js Guru</h2>
-      </section>
-      <section>
-        <h2>How it all started</h2>
-        <p>11/04/2016 11:30</p>
-        <img src="./assets/images/email1.png" alt="first email">
-      </section>
-      <section>
-        <h2>How it all started</h2>
-        <p>11/04/2016 12:30</p>
-        <img src="./assets/images/email2.png" alt="lol">
-      </section>
-      <section>
-        <h2>How it all started</h2>
-        <p>12/04/2016 09:30</p>
-        <img src="./assets/images/email3.png" alt="first email">
-      </section>
-      <section>
-        <h2>Family support</h2>
-        <img src="./assets/images/review.jpg" alt="Reviews">
-      </section>
-      <section>
-        <h2>What is the book about</h2>
-        <ul>
-          <li class="fragment">Two applications</li>
-          <li class="fragment">Developed from scratch</li>
-          <li class="fragment">Going through unit tests and e2e tests</li>
-          <li class="fragment">Deployed + CI</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Problems</h2>
-        <img src="./assets/images/vue2.png" alt="">
-      </section>
-      <section>
-        <h2>Happiness</h2>
-        <img src="./assets/images/photowithbook.jpg" alt="">
-      </section>
-      <section>
-        <h2>Surprise</h2>
-        <img src="./assets/images/hackernews.jpg" alt="">
-      </section>
-      <section>
-        <h2>Still</h2>
-        <p>Writing books? Never ever again!</p>
-      </section>
-      <section>
-        <h2>All of a sudden</h2>
-        <img src="./assets/images/email4.png" alt="">
-      </section>
-      <section>
-        <h2>Let's do it!</h2>
-        <img src="./assets/images/profitoro_logo.svg" alt="">
       </section>
       <section>
         <h2>What is ProFitOro?</h2>
@@ -113,13 +51,146 @@
         <h2>
           What is ProFitOro?
         </h2>
-        <ul>
-          <li>Pomodoro timer</li>
-          <li>Workouts</li>
-        </ul>
+          <p class="fragment"><span class="nice-pink">P</span>omod<span class="nice-pink">oro</span> time management technique</p>
+          <p class="fragment"><span class="big-text nice-pink">+</span></p>
+          <p class="fragment">Office <span class="nice-pink">fit</span>ness workouts</p>
+          <p class="fragment"><span class="big-text nice-pink">=</span></p>
+          <p class="fragment"><span class="big-text nice-pink">Profit</span></p>
       </section>
       <section>
-        <img src="./assets/images/workout.png" alt="">
+        <img src="./assets/images/screenshot1.png" alt="Screenshot1">
+      </section>
+      <section>
+        <img src="./assets/images/screenshot2.png" alt="Screenshot1">
+      </section>
+      <section>
+        <img src="./assets/images/screenshot3.png" alt="Screenshot1">
+      </section>
+      <section>
+        <img src="./assets/images/screenshot4.png" alt="Screenshot1">
+      </section>
+      <section>
+        <img src="./assets/images/screenshot1.png" alt="Screenshot1">
+      </section>
+      <section>
+        <h2>Vue components</h2>
+        <p class="fragment">File with .vue extension</p>
+        <pre class="fragment">
+          <code>
+&lt;template>
+  // some markup
+&lt;/template>
+
+&lt;script>
+  // some js
+&lt;/script>
+
+&lt;style scoped>
+  // some css
+&lt;/style>
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h2>Vue components</h2>
+        <div style="display: flex; align-items: center">
+          <div class="left-column">
+          <pre>
+          <code v-pre>
+&lt;template>
+  &lt;h5>Hello {{ name }}/h5>
+&lt;/template>
+&lt;script>
+  export default {
+    data () {
+      return {
+        name: 'Olga'
+      }
+    }
+  }
+&lt;/script>
+&lt;style scoped>
+  h5 {
+    color: #317a80;
+    background: ghostwhite;
+  }
+&lt;/style>
+          </code>
+        </pre>
+          </div>
+          <div class="right-column">
+            <hello></hello>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Vue - two way data binding</h2>
+        <div style="display: flex; align-items: center">
+          <div class="left-column">
+          <pre>
+          <code v-pre>
+&lt;template>
+  &lt;div>
+    &lt;h5>Hello {{ name }}/h5>
+    &lt;input type="text" v-model="name">
+  &lt;/div>
+&lt;/template>
+&lt;script>
+  export default {
+    data () {
+      return {
+        name: 'Olga'
+      }
+    }
+  }
+&lt;/script>
+&lt;style scoped>
+  h5 {
+    color: #317a80;
+    background: ghostwhite;
+  }
+&lt;/style>
+          </code>
+        </pre>
+          </div>
+          <div class="right-column">
+            <hello2></hello2>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Vue reusable components</h2>
+        <h3>Kitten Component</h3>
+        <pre>
+          <code>
+&lt;template>
+  &lt;div class="well kittens text-center">
+    &lt;img :src="catimgsrc" />
+  &lt;/div>
+&lt;/template>
+
+&lt;script>
+  export default {
+    data () {
+      return {
+        timestamp: Date.now()
+      }
+    },
+    computed: {
+      catimgsrc () {
+        return 'http://thecatapi.com/api/images/get?size=med&ts=' + this.timestamp
+      }
+    },
+    created () {
+      const INTERVAL = 10000
+      setInterval(() => {
+        this.timestamp = Date.now()
+      }, INTERVAL)
+    }
+  }
+/script>
+          </code>
+        </pre>
       </section>
       <section>
         <h2>Vue, Vuex, Nuxt</h2>
@@ -440,6 +511,68 @@ angle () {
         </pre>
       </section>
       <section>
+        <h2>How I wrote a book about Vue.js</h2>
+      </section>
+      <section>
+        <h2>Learning Vue.js 2</h2>
+        <a href="https://goo.gl/1ayuof">https://goo.gl/1ayuof</a>
+      </section>
+      <section>
+        <h2>I am not any Vue.js Guru</h2>
+      </section>
+      <section>
+        <h2>How it all started</h2>
+        <p>11/04/2016 11:30</p>
+        <img src="./assets/images/email1.png" alt="first email">
+      </section>
+      <section>
+        <h2>How it all started</h2>
+        <p>11/04/2016 12:30</p>
+        <img src="./assets/images/email2.png" alt="lol">
+      </section>
+      <section>
+        <h2>How it all started</h2>
+        <p>12/04/2016 09:30</p>
+        <img src="./assets/images/email3.png" alt="first email">
+      </section>
+      <section>
+        <h2>Family support</h2>
+        <img src="./assets/images/review.jpg" alt="Reviews">
+      </section>
+      <section>
+        <h2>What is the book about</h2>
+        <ul>
+          <li class="fragment">Two applications</li>
+          <li class="fragment">Developed from scratch</li>
+          <li class="fragment">Going through unit tests and e2e tests</li>
+          <li class="fragment">Deployed + CI</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Problems</h2>
+        <img src="./assets/images/vue2.png" alt="">
+      </section>
+      <section>
+        <h2>Happiness</h2>
+        <img src="./assets/images/photowithbook.jpg" alt="">
+      </section>
+      <section>
+        <h2>Surprise</h2>
+        <img src="./assets/images/hackernews.jpg" alt="">
+      </section>
+      <section>
+        <h2>Still</h2>
+        <p>Writing books? Never ever again!</p>
+      </section>
+      <section>
+        <h2>All of a sudden</h2>
+        <img src="./assets/images/email4.png" alt="">
+      </section>
+      <section>
+        <h2>Let's do it!</h2>
+        <img src="./assets/images/profitoro_logo.svg" alt="">
+      </section>
+      <section>
         <h2>Was it worth it?</h2>
         <ul>
           <li>I've learned a lot</li>
@@ -473,6 +606,8 @@ angle () {
   import Tomato from './components/Tomato.vue'
   import Pomodoro from './components/timer/Pomodoro.vue'
   import WorkoutComponent from './components/WorkoutComponent.vue'
+  import Hello from './components/Hello.vue'
+  import Hello2 from './components/Hello2.vue'
   export default {
     name: 'app',
     data () {
@@ -481,7 +616,7 @@ angle () {
       }
     },
     components: {
-      Pomodoro, Tomato, WorkoutComponent
+      Pomodoro, Tomato, WorkoutComponent, Hello, Hello2
     },
     mounted () {
       Reveal.initialize({

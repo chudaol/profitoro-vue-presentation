@@ -468,14 +468,62 @@ let configRef = db.ref(`/configuration/${user.uid}`)
           <p>Update database</p>
           <pre>
            <code>
-configRef.update({workingPomodoro: 20})
+// store/actions.js
+setWorkingPomodoro () {
+  configRef.update({workingPomodoro: 20})
+}
           </code>
         </pre>
         </div>
       </section>
       <section>
+        <h2>Firebase - bind state to the reference</h2>
+        <h3>Vuexfire plugin</h3>
+        <pre>
+          <code>
+// state
+const state = {
+  config: {}
+}
+
+// actions
+import firebaseAction from 'vuexfire'
+
+bindConfig: firebaseAction(({bindFirebaseRef}) => {
+  bindFirebaseRef('config', configRef)
+})
+        </code>
+      </pre>
+      </section>
+      <section>
+        <h2>Firebase realtime Database</h2>
+        <h3>Using inside the component</h3>
+        <pre>
+          <code>
+&lt;template>
+  &lt;div class="container">
+    &lt;input type="text" :value="config.workingPomodoro" @change="setWorkingPomodoro">
+  &lt;/div>
+&lt;/template>
+&lt;script>
+  import { mapState, mapActions } from 'vuex'
+  export default {
+    computed: {
+      ...mapState({
+        config
+      })
+    },
+    methods: {
+      ...mapActions(['setWorkingPomodoro'])
+    }
+  }
+&lt;/script>
+          </code>
+        </pre>
+      </section>
+      <section>
         <h2>Firebase realtime database</h2>
-        <video src="./assets/images/screencast.mov"></video>
+        <video class="screencast" controls src="dist/screencast.mov"></video>
       </section>
       <section>
         <h2>Jest</h2>
@@ -495,35 +543,6 @@ test('login snapshot', () => {
 })
           </code>
         </pre>
-      </section>
-      <section>
-        <h2>CircleCI</h2>
-        <img src="./assets/images/ci.png" alt="CI">
-      </section>
-      <section>
-        <h2>CircleCI</h2>
-        <h3>Simple configuration</h3>
-        <div class="left-column">
-          <img src="./assets/images/workflow.png" alt="">
-        </div>
-        <div class="right-column">
-          <pre>
-            <code>
-workflows:
-  version: 2
-  build-and-approval-deploy:
-    jobs:
-      - build
-      - hold:
-         type: approval
-         requires:
-           - build
-      - deploy:
-          requires:
-            - hold
-            </code>
-          </pre>
-        </div>
       </section>
       <section>
         <h2>How I wrote a book about Vue.js</h2>
@@ -591,21 +610,20 @@ workflows:
         <h2>Was it worth it?</h2>
         <ul>
           <li>I've learned a lot</li>
-          <li>I have my second book</li>
+          <li>I have 2 books</li>
           <li>I have my ProFitOro and I use it</li>
           <li>Big win! <span class="pink">&hearts;</span></li>
         </ul>
       </section>
       <section>
+        <h2>Knowledge sharing is a big win</h2>
+        <a href="https://confluence.optiopay.com/display/KBOG/Internal+MeetUps">https://confluence.optiopay.com/display/KBOG/Internal+MeetUps</a>
+        <img src="./assets/images/confluence.png" alt="confluence">
+      </section>
+      <section>
         <h2>Conclusion</h2>
         <p class="fragment">Do not hesitate</p>
         <p class="fragment">Just do it <span class="big-text pink">&#x2764;</span></p>
-        <div class="fragment">
-          <p>we can help you</p>
-          <div class="logos">
-            <img src="./assets/edera_logo.png" alt="">
-          </div>
-        </div>
       </section>
       <section>
         <h1>Thank you</h1>
@@ -649,6 +667,9 @@ workflows:
 </script>
 
 <style scoped lang="scss">
+  video.screencast {
+    height: 70vh;
+  }
   img.not-so-big {
     max-height: 70vh!important;
   }

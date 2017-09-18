@@ -39,7 +39,7 @@
       <section>
         <h2>What is ProFitOro</h2>
         <p><a href="https://goo.gl/bQbwpW">https://goo.gl/bQbwpW</a></p>
-        <img src="./assets/images/book_cover.png" alt="book cover">
+        <img style="height: 55vh" src="./assets/images/book_cover.png" alt="book cover">
         <p>Not published yet</p>
       </section>
       <section>
@@ -68,9 +68,6 @@
       </section>
       <section>
         <img src="./assets/images/screenshot4.png" alt="Screenshot1">
-      </section>
-      <section>
-        <img src="./assets/images/screenshot1.png" alt="Screenshot1">
       </section>
       <section>
         <h2>Vue components</h2>
@@ -159,6 +156,74 @@
         </div>
       </section>
       <section>
+        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
+        <p>Timer - just an SVG</p>
+        <pre>
+          <code>
+<div class="center-content">
+&lt;svg class="timer" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
+  &lt;circle class="bigCircle" r="100" cx="100" cy="100">&lt;/circle>
+  &lt;circle class="smallCircle" r="90" cx="100" cy="100">&lt;/circle>
+  &lt;path class="segment" :d="M100,100 L100, 0 A100,100 0 0,0 X, Y z">&lt;/path>
+&lt;/svg>
+</div>
+          </code>
+        </pre>
+        <ul>
+          <li>M - move to</li>
+          <li>L - line to</li>
+          <li>A - arc</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
+        <pre>
+          <code>
+&lt;template>
+  &lt;svg class="timer" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
+    &lt;circle class="bigCircle" r="100" cx="100" cy="100">&lt;/circle>
+    &lt;circle class="smallCircle" r="90" cx="100" cy="100">&lt;/circle>
+    &lt;path class="segment" :d="path">&lt;/path>
+  &lt;/svg>
+&lt;/template>
+&lt;script>
+  export default {
+    props: ['angle'],
+    computed: {
+      path () {
+        let x = 100 - 100 * Math.sin(Math.PI * this.angle / 180)
+        let y = 100 - 100 * Math.cos(Math.PI * this.angle / 180)
+
+        return this.angle <= 180 ? `M100,100 L100, 0 A100,100 0 0,0 ${x}, ${y} z` : `M100,100  L100, 0 A100,100 0 0,0 100, 200 A100,100 0 0,0 ${x}, ${y} z`
+      }
+    }
+  }
+&lt;/script>
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
+        <div style="display:flex">
+          <div style="display:flex; flex-direction: column">
+            <SvgCircle angle="90" />
+            <p><small>&lt;SvgCircle angle="90" /></small></p>
+          </div>
+          <div style="display:flex; flex-direction: column">
+            <SvgCircle angle="45" />
+            <p><small>&lt;SvgCircle angle="45" /></small></p>
+          </div>
+          <div style="display:flex; flex-direction: column">
+            <SvgCircle angle="273" />
+            <p><small>&lt;SvgCircle angle="273" /></small></p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
+        <iframe width="100%" height="600" src="//jsfiddle.net/chudaol/ak851ecj/6/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
         <h2>Vue reusable components</h2>
         <h3>Kitten Component</h3>
         <pre>
@@ -191,6 +256,11 @@
 /script>
           </code>
         </pre>
+      </section>
+      <section>
+        <h3>Vue reusable components</h3>
+        <h4>Kitten Component</h4>
+        <iframe width="100%" height="600" src="//jsfiddle.net/chudaol/odL9okk8/1/embedded/html,js,result/dark/" allowfullscreen=true frameborder="0"></iframe>
       </section>
       <section>
         <h2>Vue, Vuex, Nuxt</h2>
@@ -384,6 +454,30 @@ authenticate ({state, dispatch}, {email, password}) {
         </pre>
       </section>
       <section>
+        <h2>Firebase realtime Database</h2>
+        <div class="left-column fragment">
+          <p>Obtain database reference</p>
+          <pre>
+          <code>
+let db = firebaseApp.database()
+let configRef = db.ref(`/configuration/${user.uid}`)
+          </code>
+        </pre>
+        </div>
+        <div class="right-column fragment">
+          <p>Update database</p>
+          <pre>
+           <code>
+configRef.update({workingPomodoro: 20})
+          </code>
+        </pre>
+        </div>
+      </section>
+      <section>
+        <h2>Firebase realtime database</h2>
+        <video src="./assets/images/screencast.mov"></video>
+      </section>
+      <section>
         <h2>Jest</h2>
         <h3>Snapshot testing FTW</h3>
         <pre>
@@ -430,85 +524,6 @@ workflows:
             </code>
           </pre>
         </div>
-      </section>
-      <section>
-        <h2>Timer</h2>
-        <p>Just an SVG</p>
-        <pre>
-          <code>
-<div class="center-content">
-  &lt;svg class="timer" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
-    &lt;circle class="bigCircle" r="100" cx="100" cy="100">&lt;/circle>
-    &lt;circle class="smallCircle" r="90" cx="100" cy="100">&lt;/circle>
-    &lt;path class="segment" :d="M100,100 L100, 0 A100,100 0 0,0 X, Y z">&lt;/path>
-  &lt;/svg>
-</div>
-          </code>
-        </pre>
-        <ul>
-          <li>M - move to</li>
-          <li>L - line to</li>
-          <li>A - arc</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Timer</h2>
-        <h3>Find X and Y</h3>
-        <pre>
-          <code>
-&lt;template>
-  &lt;svg class="timer">
-    &lt;circle class="bigCircle" r="100" cx="100" cy="100">&lt;/circle>
-    &lt;circle class="smallCircle" r="90" cx="100" cy="100">&lt;/circle>
-    &lt;path class="segment" :d="path">&lt;/path>
-  &lt;/svg>
-&lt;/template>
-&lt;script>
-  function calcEndPoint (angle) {
-    let x, y
-
-    x = 100 - 100 * Math.sin(Math.PI * angle / 180)
-    y = 100 - 100 * Math.cos(Math.PI * angle / 180)
-
-    return {
-      x, y
-    }
-  }
-
-  function calcPath (angle) {
-    let d
-    let {x, y} = calcEndPoint(angle)
-    if (angle <= 180) {
-      d = `M100,100 L100, 0 A100,100 0 0,0 ${x}, ${y} z`
-    } else {
-      d = `M100,100  L100, 0 A100,100 0 0,0 100, 200 A100,100 0 0,0 ${x}, ${y} z`
-    }
-    return d
-  }
-  export default {
-    props: ['angle'],
-    computed: {
-      path () {
-        return calcPath(this.angle)
-      }
-    }
-  }
-&lt;/script>
-          </code>
-        </pre>
-      </section>
-      <section>
-        <h2>Timer</h2>
-        <h3>Angle calculation</h3>
-        <p>Set timeout and recalculate timestamp property</p>
-        <p><strong>angle</strong> is a computed property</p>
-        <pre>
-          <code>
-angle () {
-  return 360 - (360 / this.time * this.timestamp)
-},
-          </code>
-        </pre>
       </section>
       <section>
         <h2>How I wrote a book about Vue.js</h2>
@@ -608,6 +623,7 @@ angle () {
   import WorkoutComponent from './components/WorkoutComponent.vue'
   import Hello from './components/Hello.vue'
   import Hello2 from './components/Hello2.vue'
+  import SvgCircle from './components/timer/SvgCircleSector.vue'
   export default {
     name: 'app',
     data () {
@@ -616,7 +632,7 @@ angle () {
       }
     },
     components: {
-      Pomodoro, Tomato, WorkoutComponent, Hello, Hello2
+      Pomodoro, Tomato, WorkoutComponent, Hello, Hello2, SvgCircle
     },
     mounted () {
       Reveal.initialize({

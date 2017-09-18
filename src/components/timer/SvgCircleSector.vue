@@ -14,46 +14,14 @@
   </div>
 </template>
 <script>
-  /**
-   * Calculates the x,y coordinates on the circumference for the given angle
-   * @param {number} angle
-   * @returns {object}
-   */
-  function calcEndPoint (angle) {
-    let x, y
-
-    if (angle <= 180) {
-      x = 100 - 100 * Math.sin(Math.PI * angle / 180)
-      y = 100 - 100 * Math.cos(Math.PI * angle / 180)
-    } else {
-      x = 100 - 100 * Math.sin(Math.PI * angle / 180)
-      y = 100 - 100 * Math.cos(Math.PI * angle / 180)
-    }
-
-    return {
-      x, y
-    }
-  }
-  /**
-   * Calculates the path attribute for the svg element to draw a circle sector for the given angle
-   * @param {number} angle
-   * @returns {string}
-   */
-  function calcPath (angle) {
-    let d
-    let {x, y} = calcEndPoint(angle)
-    if (angle <= 180) {
-      d = `M100,100 L100, 0 A100,100 0 0,0 ${x}, ${y} z`
-    } else {
-      d = `M100,100  L100, 0 A100,100 0 0,0 100, 200 A100,100 0 0,0 ${x}, ${y} z`
-    }
-    return d
-  }
   export default {
     props: ['angle', 'text'],
     computed: {
       path () {
-        return calcPath(this.angle)
+        let x = 100 - 100 * Math.sin(Math.PI * this.angle / 180)
+        let y = 100 - 100 * Math.cos(Math.PI * this.angle / 180)
+
+        return this.angle <= 180 ? `M100,100 L100, 0 A100,100 0 0,0 ${x}, ${y} z` : `M100,100  L100, 0 A100,100 0 0,0 100, 200 A100,100 0 0,0 ${x}, ${y} z`
       }
     }
   }

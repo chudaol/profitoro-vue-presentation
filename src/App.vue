@@ -183,6 +183,34 @@
         </ul>
       </section>
       <section>
+        <p>
+          <em>
+            x = 100 – b
+          </em>
+        </p>
+        <p>
+          <em>
+            y = 100 – a
+          </em>
+        </p>
+        <img class="not-so-big" src="./assets/images/trigonometry.png" alt="trigonometry">
+      </section>
+      <section>
+        <p>
+          <em>
+            x = 100 – 100 * sin&alpha;
+          </em>
+        </p>
+        <p>
+          <em>
+            y = 100 – 100 * cos&alpha;
+          </em>
+        </p>
+        <img class="not-so-big" src="./assets/images/trigonometry.png" alt="trigonometry">
+      </section>
+      <section>
+        <h2>Svg Circle component</h2>
+        <p><em>SvgCircle.vue</em></p>
         <pre>
           <code>
 &lt;template>
@@ -225,6 +253,7 @@
         </div>
       </section>
       <section>
+        <h4>Updating the angle with time</h4>
         <iframe width="100%" height="600" src="//jsfiddle.net/chudaol/ak851ecj/6/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       </section>
       <section>

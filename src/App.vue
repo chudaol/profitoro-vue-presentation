@@ -37,7 +37,7 @@
         </ul>
       </section>
       <section>
-        <h1>What is ProFitOro?</h1>
+        <h1>What is ProFitOro &#x2753;</h1>
       </section>
       <section>
         <p><a href="https://goo.gl/bQbwpW">https://goo.gl/bQbwpW</a></p>
@@ -49,11 +49,11 @@
         <img class="not-so-big" src="./assets/images/background.png" alt="background">
       </section>
       <section>
-          <p class="very-big-text fragment"><span class="nice-pink">P</span>omod<span class="nice-pink">oro</span> time management technique</p>
+          <p class="very-big-text"><span class="nice-pink">P</span>omod<span class="nice-pink">oro</span> &#x1F345;  &#x23F3; management technique</p>
           <p class="very-big-text fragment"><span class="very-very-big-text nice-pink">+</span></p>
-          <p class="very-big-text fragment">Office <span class="nice-pink">fit</span>ness workouts</p>
+          <p class="very-big-text fragment">Office <span class="nice-pink">fit</span>ness workouts &#x1F4AA;</p>
           <p class="very-big-text fragment"><span class="very-very-big-text big-text nice-pink">=</span></p>
-          <p class="very-big-text fragment"><span class="big-text nice-pink">Profit</span></p>
+          <p class="very-big-text fragment"><span class="big-text nice-pink">Profit &#x1F4B0;</span></p>
       </section>
       <section>
         <img src="./assets/images/screenshot1.png" alt="Screenshot1">
@@ -71,6 +71,7 @@
         <h1>
           Vue Components
         </h1>
+        <h1>&#x1F529; &#x1F528; &#x1F527;</h1>
       </section>
       <section>
         <p class="fragment">File with .vue extension</p>
@@ -123,6 +124,7 @@
       </section>
       <section>
         <h1>Vue - two way data binding</h1>
+        <h1>&#x21A9; &#x21AA; &#x1F389; &#x1F47B;</h1>
       </section>
       <section>
         <div style="display: flex; align-items: center">
@@ -181,7 +183,6 @@
         </ul>
       </section>
       <section>
-        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
         <pre>
           <code>
 &lt;template>
@@ -208,7 +209,6 @@
         </pre>
       </section>
       <section>
-        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
         <div style="display:flex">
           <div style="display:flex; flex-direction: column">
             <SvgCircle angle="90" />
@@ -225,11 +225,12 @@
         </div>
       </section>
       <section>
-        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
         <iframe width="100%" height="600" src="//jsfiddle.net/chudaol/ak851ecj/6/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       </section>
       <section>
-        <h2>Vue reusable components</h2>
+        <h1>&#x1F638; &#x1F63A; &#x1F63B; &#x1F63C;</h1>
+      </section>
+      <section>
         <h3>Kitten Component</h3>
         <pre>
           <code>
@@ -263,12 +264,19 @@
         </pre>
       </section>
       <section>
-        <h3>Vue reusable components</h3>
         <h4>Kitten Component</h4>
         <iframe width="100%" height="600" src="//jsfiddle.net/chudaol/odL9okk8/1/embedded/html,js,result/dark/" allowfullscreen=true frameborder="0"></iframe>
       </section>
       <section>
-        <h2>Vue, Vuex, Nuxt</h2>
+        <h1>Nuxt</h1>
+        <h1>&#x2728; &#x1F680; &#x1F36D;</h1>
+      </section>
+      <section>
+        <p>Nuxt is a template for creating Vue application</p>
+        <p class="nice-pink">vue init nuxt my-awesome-project</p>
+
+      </section>
+      <section>
         <p>Nuxt is awesome</p>
         <div class="left-column fragment">
           <h4>Vue router</h4>
@@ -406,11 +414,14 @@ module.exports = {
         </pre>
       </section>
       <section>
-        <h2>Firebase</h2>
+        <h1>Firebase</h1>
+        <h1>&#x1F308; &#x1F525; &#x1F33B;</h1>
+      </section>
+      <section>
         <img src="./assets/images/firebase.png" alt="Firebase">
       </section>
       <section>
-        <h2>Firebase</h2>
+        <h2>&#x1F3B0;</h2>
         <ul>
           <li class="fragment">Authentication</li>
           <li class="fragment">Datastorage</li>
@@ -420,7 +431,10 @@ module.exports = {
         <div class="fragment">&hearts;</div>
       </section>
       <section>
-        <h2>Firebase</h2>
+        <h1>Firebase - authentication</h1>
+        <h1>&#x1F510;</h1>
+      </section>
+      <section>
         <h3>Auth</h3>
         <p>store/actions.js</p>
         <pre>
@@ -432,7 +446,6 @@ authenticate ({state, dispatch}, {email, password}) {
         </pre>
       </section>
       <section>
-        <h2>Firebase</h2>
         <h3>Auth</h3>
         <p>components/Login.vue</p>
         <pre>
@@ -459,7 +472,10 @@ authenticate ({state, dispatch}, {email, password}) {
         </pre>
       </section>
       <section>
-        <h2>Firebase realtime Database</h2>
+        <h1>Firebase - realtime database</h1>
+        <h1>&#x1F525; &#x1F680;</h1>
+      </section>
+      <section>
         <div class="left-column fragment">
           <p>Obtain database reference</p>
           <pre>
@@ -482,7 +498,7 @@ setWorkingPomodoro () {
         </div>
       </section>
       <section>
-        <h2>Firebase - bind state to the reference</h2>
+        <h3>Bind DB reference to the Vuex state</h3>
         <h3>Vuexfire plugin</h3>
         <pre>
           <code>
@@ -501,7 +517,6 @@ bindConfig: firebaseAction(({bindFirebaseRef}) => {
       </pre>
       </section>
       <section>
-        <h2>Firebase realtime Database</h2>
         <h3>Using inside the component</h3>
         <pre>
           <code>
@@ -527,11 +542,16 @@ bindConfig: firebaseAction(({bindFirebaseRef}) => {
         </pre>
       </section>
       <section>
-        <h2>Firebase realtime database</h2>
+        <h3>Result:</h3>
         <video class="screencast" controls src="dist/screencast.mov"></video>
       </section>
       <section>
-        <h2>Jest</h2>
+        <h1>Jest</h1>
+        <div class="logos">
+          <img src="https://facebook.github.io/jest/img/jest-outline.svg" alt="Jest">
+        </div>
+      </section>
+      <section>
         <h3>Snapshot testing FTW</h3>
         <pre>
           <code>
@@ -550,14 +570,37 @@ test('login snapshot', () => {
         </pre>
       </section>
       <section>
-        <h2>How I wrote a book about Vue.js</h2>
+        <h1>BONUS! &#x1F4A1;</h1>
+      </section>
+      <section>
+        <h2>BONUS! &hearts;</h2>
+        <p><a href="https://profitorolife.com/bibi/">https://profitorolife.com/bibi/</a></p>
+      </section>
+      <section>
+        <img src="./assets/images/cat1.png" alt="cat">
+      </section>
+      <section>
+        <img src="./assets/images/cat2.png" alt="cat">
+      </section>
+      <section>
+        <img src="./assets/images/cat3.png" alt="cat">
+      </section>
+      <section>
+        <img src="./assets/images/cat4.png" alt="cat">
+      </section>
+      <section>
+        <img src="./assets/images/cat5.png" alt="cat">
+      </section>
+      <section>
+        <h1>How I wrote a book about Vue.js</h1>
+        <h1>&#x1F481; &#x1F4DD;	&#x1F4D6;</h1>
       </section>
       <section>
         <h2>Learning Vue.js 2</h2>
         <a href="https://goo.gl/1ayuof">https://goo.gl/1ayuof</a>
       </section>
       <section>
-        <h2>I am not any Vue.js Guru</h2>
+        <h1>I am not any Vue.js Guru</h1>
       </section>
       <section>
         <h2>How it all started</h2>
@@ -602,6 +645,7 @@ test('login snapshot', () => {
       <section>
         <h2>Still</h2>
         <p>Writing books? Never ever again!</p>
+        <h2>&#x1F624;</h2>
       </section>
       <section>
         <h2>All of a sudden</h2>
@@ -612,27 +656,38 @@ test('login snapshot', () => {
         <img src="./assets/images/profitoro_logo.svg" alt="">
       </section>
       <section>
-        <h2>Was it worth it?</h2>
-        <ul>
-          <li>I've learned a lot</li>
-          <li>I have 2 books</li>
-          <li>I have my ProFitOro and I use it</li>
-          <li>Big win! <span class="pink">&hearts;</span></li>
-        </ul>
+        <h1>Was it worth it?</h1>
       </section>
       <section>
-        <h2>Knowledge sharing is a big win</h2>
+        <h2>Of course it was!</h2>
+        <ul>
+          <li class="fragment">I've learned a lot &#x1F393;</li>
+          <li class="fragment">I have 2 books &#x270C;</li>
+          <li class="fragment">I have my ProFitOro and I use it &#x1F4AA;</li>
+          <li class="fragment">I shared my knowledge with people &#x1F44F;</li>
+        </ul>
+        <h2 class="fragment">&hearts;</h2>
+      </section>
+      <section>
+        <h1>Knowledge sharing is a big win</h1>
+        <h1>&#x1F393; &#x1F49E;</h1>
+      </section>
+      <section>
         <a href="https://confluence.optiopay.com/display/KBOG/Internal+MeetUps">https://confluence.optiopay.com/display/KBOG/Internal+MeetUps</a>
         <img src="./assets/images/confluence.png" alt="confluence">
       </section>
       <section>
-        <h2>Conclusion</h2>
         <p class="fragment">Do not hesitate</p>
         <p class="fragment">Just do it <span class="big-text pink">&#x2764;</span></p>
       </section>
       <section>
+        <h1>Questions?</h1>
+        <img src="./assets/images/questions.jpg" alt="questions">
+      </section>
+      <section>
         <h1>Thank you</h1>
         <h2>&#x1F64C</h2>
+        <img src="./assets/images/cat6.png" alt="cat">
       </section>
     </div>
   </div>

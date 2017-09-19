@@ -37,25 +37,23 @@
         </ul>
       </section>
       <section>
-        <h2>What is ProFitOro</h2>
+        <h1>What is ProFitOro?</h1>
+      </section>
+      <section>
         <p><a href="https://goo.gl/bQbwpW">https://goo.gl/bQbwpW</a></p>
         <img style="height: 55vh" src="./assets/images/book_cover.png" alt="book cover">
         <p>Not published yet</p>
       </section>
       <section>
-        <h2>What is ProFitOro?</h2>
         <p><a href="https://profitorolife.com/">https://profitorolife.com/</a></p>
         <img class="not-so-big" src="./assets/images/background.png" alt="background">
       </section>
       <section>
-        <h2>
-          What is ProFitOro?
-        </h2>
-          <p class="fragment"><span class="nice-pink">P</span>omod<span class="nice-pink">oro</span> time management technique</p>
-          <p class="fragment"><span class="big-text nice-pink">+</span></p>
-          <p class="fragment">Office <span class="nice-pink">fit</span>ness workouts</p>
-          <p class="fragment"><span class="big-text nice-pink">=</span></p>
-          <p class="fragment"><span class="big-text nice-pink">Profit</span></p>
+          <p class="very-big-text fragment"><span class="nice-pink">P</span>omod<span class="nice-pink">oro</span> time management technique</p>
+          <p class="very-big-text fragment"><span class="very-very-big-text nice-pink">+</span></p>
+          <p class="very-big-text fragment">Office <span class="nice-pink">fit</span>ness workouts</p>
+          <p class="very-big-text fragment"><span class="very-very-big-text big-text nice-pink">=</span></p>
+          <p class="very-big-text fragment"><span class="big-text nice-pink">Profit</span></p>
       </section>
       <section>
         <img src="./assets/images/screenshot1.png" alt="Screenshot1">
@@ -70,7 +68,11 @@
         <img src="./assets/images/screenshot4.png" alt="Screenshot1">
       </section>
       <section>
-        <h2>Vue components</h2>
+        <h1>
+          Vue Components
+        </h1>
+      </section>
+      <section>
         <p class="fragment">File with .vue extension</p>
         <pre class="fragment">
           <code>
@@ -89,7 +91,6 @@
         </pre>
       </section>
       <section>
-        <h2>Vue components</h2>
         <div style="display: flex; align-items: center">
           <div class="left-column">
           <pre>
@@ -121,7 +122,9 @@
         </div>
       </section>
       <section>
-        <h2>Vue - two way data binding</h2>
+        <h1>Vue - two way data binding</h1>
+      </section>
+      <section>
         <div style="display: flex; align-items: center">
           <div class="left-column">
           <pre>
@@ -156,7 +159,9 @@
         </div>
       </section>
       <section>
-        <h3>Vue components - data binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h3>
+        <h1>Data Binding + SVG + trigonometry = <span class="nice-pink">&hearts;</span></h1>
+      </section>
+      <section>
         <p>Timer - just an SVG</p>
         <pre>
           <code>
@@ -667,6 +672,14 @@ test('login snapshot', () => {
 </script>
 
 <style scoped lang="scss">
+  .very-big-text {
+    font-size: 2em;
+    font-weight: 600;
+  }
+  .very-very-big-text {
+    font-size: 2.5em;
+    font-weight: 900;
+  }
   video.screencast {
     height: 70vh;
   }

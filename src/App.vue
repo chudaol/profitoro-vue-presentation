@@ -32,7 +32,7 @@
           <li>Firebase - auth, datastorage, database, hosting</li>
           <li>Jest - snapshot testing</li>
           <li>Kittens</li>
-          <li>Why I wrote a book about Vue.js?</li>
+          <li>Why I wrote books about Vue.js?</li>
           <li>Knowledge Sharing</li>
         </ul>
       </section>
@@ -42,7 +42,7 @@
       <section>
         <p><a href="https://goo.gl/bQbwpW">https://goo.gl/bQbwpW</a></p>
         <img style="height: 55vh" src="./assets/images/book_cover.png" alt="book cover">
-        <p>Not published yet</p>
+        <p>Published in december 2017</p>
       </section>
       <section>
         <p><a href="https://profitorolife.com/">https://profitorolife.com/</a></p>
@@ -689,6 +689,10 @@ test('login snapshot', () => {
       </section>
       <section>
         <h2>Of course it was!</h2>
+        <img src="./assets/images/two_books.jpg" alt="">
+      </section>
+      <section>
+        <h2>Of course it was!</h2>
         <ul>
           <li class="fragment">I've learned a lot &#x1F393;</li>
           <li class="fragment">I have 2 books &#x270C;</li>
@@ -702,8 +706,12 @@ test('login snapshot', () => {
         <h1>&#x1F393; &#x1F49E;</h1>
       </section>
       <section>
-        <a href="https://confluence.optiopay.com/display/KBOG/Internal+MeetUps">https://confluence.optiopay.com/display/KBOG/Internal+MeetUps</a>
-        <img src="./assets/images/confluence.png" alt="confluence">
+        <p><a href="https://ed-era.com/">https://ed-era.com/</a></p>
+        <img class="not-so-big" src="./assets/images/edera1.png" alt="EdEra">
+      </section>
+      <section>
+        <p><a href="http://blog.ed-era.com/">http://blog.ed-era.com/</a></p>
+        <img class="not-so-big" src="./assets/images/edera2.png" alt="EdEra">
       </section>
       <section>
         <p class="fragment">Do not hesitate</p>

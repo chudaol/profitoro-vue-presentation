@@ -621,7 +621,7 @@ test('login snapshot', () => {
         <img src="./assets/images/cat5.png" alt="cat">
       </section>
       <section>
-        <h1>How I wrote a book about Vue.js</h1>
+        <h1>How I wrote my first book about Vue.js</h1>
         <h1>&#x1F481; &#x1F4DD;	&#x1F4D6;</h1>
       </section>
       <section>

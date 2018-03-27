@@ -97,7 +97,7 @@
           <pre>
           <code v-pre>
 &lt;template>
-  &lt;h5>Hello {{ name }}/h5>
+  &lt;h5>Hello {{ name }}&lt;/h5>
 &lt;/template>
 &lt;script>
   export default {

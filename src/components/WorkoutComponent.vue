@@ -19,9 +19,9 @@
   export default {
     data () {
       return {
-        name: 'Pushups',
-        description: 'Do at least 10 pushups',
-        pictures: [require('../assets/images/pushups.png')]
+        name: 'Squats',
+        description: 'Do at least 10 squats',
+        pictures: [require('../assets/images/squats.jpg')]
       }
     }
   }

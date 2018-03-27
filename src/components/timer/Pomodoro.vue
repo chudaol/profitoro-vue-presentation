@@ -33,7 +33,7 @@
         },
         state: STATE.WORKING,
         pomodoros: 0,
-        chosenWorkout: {name: 'Pushups', description: 'Do 10 pushups', picture: require('../../assets/images/pushups.png')},
+        chosenWorkout: {name: 'Squats', description: 'Do 10 squats', picture: require('../../assets/images/squats.jpg')},
         showKittens: false,
         showKittensButtonText: 'Show me some kittens!',
         showWorkoutsButtonText: 'I wanna exercise!'

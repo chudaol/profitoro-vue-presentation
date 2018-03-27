@@ -133,7 +133,7 @@
           <code v-pre>
 &lt;template>
   &lt;div>
-    &lt;h5>Hello {{ name }}/h5>
+    &lt;h5>Hello {{ name }}&lt;/h5>
     &lt;input type="text" v-model="name">
   &lt;/div>
 &lt;/template>

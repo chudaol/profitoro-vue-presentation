@@ -41,7 +41,6 @@
       <ellipse id="svg_55" cy="40" cx="20" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#ffffff" fill="#ffffff"/>
       <ellipse y="NaN" x="NaN" y2="NaN" x2="NaN" y1="NaN" x1="NaN" r="NaN" ry="20" rx="15" id="svg_57" cy="170" cx="160" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#ffffff" fill="#ffffff"/>
       <ellipse y="NaN" x="NaN" y2="NaN" x2="NaN" y1="NaN" x1="NaN" r="NaN" ry="20" rx="15" id="svg_58" cy="170" cx="190" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#ffffff" fill="#ffffff"/>
-      <ellipse transform="rotate(-60 110.00000000000003,170.00000000000003) " y="NaN" x="NaN" y2="NaN" x2="NaN" y1="NaN" x1="NaN" r="NaN" ry="10" id="svg_61" cy="170" cx="110" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#ffffff" fill="#ffffff"/>
       <ellipse y="NaN" x="NaN" y2="NaN" x2="NaN" y1="NaN" x1="NaN" r="NaN" ry="5" rx="5" id="svg_62" cy="170" cx="160" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#9cb33c" fill="#9cb33c"/>
       <ellipse id="svg_63" y="NaN" x="NaN" y2="NaN" x2="NaN" y1="NaN" x1="NaN" r="NaN" ry="5" rx="5" cy="170" cx="190" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#9cb33c" fill="#9cb33c"/>
     </g>

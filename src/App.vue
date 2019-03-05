@@ -19,7 +19,7 @@
         </div>
       </section>
       <section>
-        <h2>How I manage time and try to stay fit with Vue.js</h2>
+        <h2>How I manage time and stay fit with Vue.js</h2>
         <div>
           <tomato></tomato>
         </div>
@@ -32,7 +32,7 @@
           <li>Firebase - auth, datastorage, database, hosting</li>
           <li>Jest - snapshot testing</li>
           <li>Kittens</li>
-          <li>Why I wrote books about Vue.js?</li>
+          <li>Why I wrote books about Vue.js</li>
           <li>Knowledge Sharing</li>
         </ul>
       </section>
